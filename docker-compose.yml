@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  email-worker:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      MAILTRAP_API_TOKEN: ${MAILTRAP_TOKEN}

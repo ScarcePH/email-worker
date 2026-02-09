@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git
+.gitignore
+Dockerfile
+node_modules/
+tests/
+docs/
+*.log
+.env
