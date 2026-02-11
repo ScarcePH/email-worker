@@ -1,9 +1,17 @@
 version: "3.9"
 
 services:
+  
   email-worker:
+    env_file:
+        - .env
     build: .
+    image: scarceph-email-worker
     ports:
-      - "8080:8080"
+      - "5002:5002"
+    # ports:
+    #   - "8080:8080"
     environment:
       MAILTRAP_API_TOKEN: ${MAILTRAP_TOKEN}
+    command: flask run --host=0.0.0.0 --port=5002
+
