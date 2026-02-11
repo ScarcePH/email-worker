@@ -21,6 +21,10 @@ def send_email():
 
     if email_type == "validate_payment":
         template = os.environ["VALIDATE_TEMPLATE"]
+    elif email_type == 'approve_payment':
+        template = os.environ['APPROVE_TEMPLATE']
+    elif email_type == 'decline_payment':
+        template = os.environ['DECLINE_TEMPLATE']
     else:
         return jsonify({"error": "Unsupported email type"}), 400
 
